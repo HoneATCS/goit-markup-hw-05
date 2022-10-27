@@ -75,8 +75,7 @@ li {
   
 }
 /*  Ефект діючої сторінки*/
-.link-s::after,
-.link::after{
+.current::after{
 content: '';
 position: absolute;
 display: block;
@@ -85,15 +84,17 @@ height: 4px;
 background-color: #2196F3;
 left: 0;
 bottom: -1px;
-opacity: 0;
+opacity: 1;
 border-radius: 2px;
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/*
 .link-s:hover::after,
 .link:hover::after {
 opacity: 1;
 }
+*/
 
 .link-mail,
 .linktel {
@@ -236,7 +237,9 @@ opacity: 1;
   border-color: transparent;
   padding: 6px 25px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .but {
@@ -252,7 +255,9 @@ opacity: 1;
   border-color: transparent;
   padding: 6px 22px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carts {
@@ -311,7 +316,6 @@ padding-bottom: 30px;
 
 .produkt-text{
 padding: 63px 24px;
-
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
@@ -319,8 +323,6 @@ font-size: 18px;
 line-height: 28px;
 letter-spacing: 0.03em;
 color: var(--primary-white-color);
-
-
 }
 
 .produkt-overlay{
@@ -747,7 +749,7 @@ align-items: center;
 background-color: var(--accent-color);
 fill: #FFFFFF;
 }
-
+/*
 .icons-link:hover .icon-instagram-2,
 .icons-link:focus .icon-instagram-2{
 background-color: var(--accent-color);
@@ -770,7 +772,7 @@ fill:  #FFFFFF;
 background-color: var(--accent-color);
 fill: #FFFFFF;
 }
-
+*/
 .namec{
   text-align: center;
 }
@@ -786,7 +788,8 @@ fill: #FFFFFF;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon .icon-instagram-2{
@@ -863,7 +866,8 @@ border: 1px solid #AFB1B8;
 border-radius: 4px;
 justify-content: center;
 align-items: center;
-transition: fill,border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -1102,7 +1106,10 @@ border: 1px solid rgba(0, 0, 0, 0.1);
 background-image: url("../images/close.svg");
 background-repeat: no-repeat;
 background-position: center;
+background-color: #FFFFFF;
+cursor: pointer;
 }
+
 .close{
   margin: 10px 10px;
   width: 11px;
